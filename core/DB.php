@@ -10,7 +10,7 @@ class DB
     {
         try {
 
-            $this->connection = new \PDO('mysql:host=81.169.228.159; dbname=php_mvc;', 'remote', 'Wachtwoord12');
+            $this->connection = new \PDO('mysql:host=81.169.228.159; dbname=php_mvc;', 'remote', 'XXXXXXX');
 
         }catch (\PDOException $e){
 
