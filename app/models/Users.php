@@ -2,13 +2,17 @@
 
 namespace App\Models;
 
-class Users {
+use Core\Model;
 
-    function __construct()
+class Users extends Model
+{
+
+    public function getUser()
     {
 
-        echo " UsersModel ";
+        $data = $this->db->read("users");
 
+        return $data;
     }
 
 }

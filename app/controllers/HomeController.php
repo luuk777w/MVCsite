@@ -2,15 +2,27 @@
 
 namespace App\Controllers;
 
-class HomeController
+use Core\Auth;
+use Core\Controller;
+use App\Models\Users;
+
+class HomeController extends Controller
 {
 
     function index(){
-        return "HomeController";
+
+        $user = new Users();
+        $naam = $user->getUser()[0]->username;
+
+        $auth = new Auth();
+
+        //$auth->makeCookie("Luuk", "admin");
+
+        return $this->view->render("home", compact("naam"));
     }
 
     function bla(){
-        return "bla";
+        return "blaHome";
     }
 
 }

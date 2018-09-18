@@ -4,5 +4,9 @@
       "App\\": "app",
       "Core\\": "core"
     }
+  },
+  "require": {
+    "philo/laravel-blade": "^3.1"
+    
   }
 }
